@@ -2,11 +2,14 @@ import React from 'react'
 import { ShoppingBag, Search, User } from 'react-feather';
 import MainLogo from './logo-main';
 import { NavigationMenuItems } from './navigation-items';
+import { Badge } from './ui/badge';
+import SideMenu from './side-menu';
 
 export default function Navbar() {
     return (
-        <nav className='flex justify-between items-center py-2'>
-            <div className='text-3xl'>
+        <nav className='flex justify-between items-center py-4 w-full'>
+            <div className='md:hidden pt-1'><SideMenu/></div>
+            <div className='text-2xl'>
                 <MainLogo/>
             </div>
             <div className='hidden md:block'>
@@ -15,9 +18,9 @@ export default function Navbar() {
             <div className='flex gap-2'>
                 <Search/>
                 <User/>
-                <div className="relative flex justify-center items-center">
+                <div className="relative flex items-center justify-center gap-1">
                     <ShoppingBag/>
-                    <span className=" bg-black dark:bg-white text-white dark:text-black rounded-full text-xs w-5 h-5 flex items-center justify-center">2</span>
+                    <Badge className='text-[0.75rem]'>1</Badge>
                 </div>
             </div>
         </nav>

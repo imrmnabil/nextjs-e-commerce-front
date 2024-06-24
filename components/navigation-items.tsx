@@ -69,7 +69,7 @@ export function NavigationMenuItems() {
                     <NavigationMenuTrigger>
                         <h1 className=" text-base">Catagories</h1>
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent >
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                             {components.map((component) => (
                                 <ListItem
@@ -85,14 +85,14 @@ export function NavigationMenuItems() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link href="/deals" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
                         <h1 className=" text-base">Deals</h1>
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link href="/deals" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
                         <h1 className=" text-base">Contact Us</h1>
                         </NavigationMenuLink>
                     </Link>

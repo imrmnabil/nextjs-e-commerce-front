@@ -13,6 +13,12 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons"
+import MainCarouselItem from "./main-carousel-item"
+
+const carousel_items: { path: String, title: String, desc: String, button_txt: String }[] = [
+    { path: '/images/carousel/1.jpg', title: 'Listen to the amazing music sound.', desc: 'Experience music like never before', button_txt: 'Buy Now' },
+    { path: '/images/carousel/sonos_roam_2.jpg', title: 'Listen to the amazing music sound.', desc: 'Experience music like never before', button_txt: 'View' }
+]
 
 export function MainCarousel() {
     const [api, setApi] = React.useState<CarouselApi>()
@@ -38,21 +44,15 @@ export function MainCarousel() {
                 loop: true,
             }}
             plugins={[
-                Autoplay({
-                    delay: 2000,
-                })
+                // Autoplay({
+                //     delay: 2000,
+                // })
             ]}
             setApi={setApi}>
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {carousel_items.map((item, index) => (
                     <CarouselItem key={index}>
-                        <div className="">
-                            <Card>
-                                <CardContent className="flex aspect-square items-center justify-center">
-                                    <span className="text-4xl font-semibold">{index + 1}</span>
-                                </CardContent>
-                            </Card>
-                        </div>
+                            <MainCarouselItem path={item.path} title={item.title} desc={item.desc} button_txt={item.button_txt}/>
                     </CarouselItem>
                 ))}
             </CarouselContent>
@@ -63,13 +63,13 @@ export function MainCarousel() {
                 <ChevronRightIcon className="w-6 h-6 text-muted-foreground" />
             </CarouselNext>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-                {Array.from({ length: 5 }).map((_, index) => (
+                {carousel_items.map((item, index) => (
                     <button
-                    onClick={()=>api?.scrollTo(index)}
-                     key={index}
-                    className={`h-2 rounded-full transition-all ${current === index+1 ? "bg-muted-foreground w-5" : "bg-muted-foreground/50 hover:bg-muted-foreground/75 w-2"
-                        }`}
-                />
+                        onClick={() => api?.scrollTo(index)}
+                        key={index}
+                        className={`h-2 rounded-full transition-all ${current === index + 1 ? "bg-muted-foreground w-5" : "bg-muted-foreground/50 hover:bg-muted-foreground/75 w-2"
+                            }`}
+                    />
                 ))}
             </div>
         </Carousel>

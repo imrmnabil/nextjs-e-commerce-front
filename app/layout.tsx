@@ -23,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <header className={cn('container')}>
-        <Navbar/>
+        <header className={cn('z-50  w-full')}>
+        <div className="flex justify-center items-center px-2 sm:container">
+          <Navbar/>
+          </div>
         </header>
       <ThemeProvider
             attribute="class"
