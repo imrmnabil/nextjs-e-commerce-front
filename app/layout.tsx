@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { NavigationMenuItems } from '../components/navigation-items';
 import Navbar from '../components/navbar';
 import { cn } from "@/lib/utils";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({subsets:["latin"],weight:"400"});
@@ -22,6 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: light)"
+			content="white"
+		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: dark)"
+			content="black"
+		/>
+	</Head>
       <body className={poppins.className}>
         <header className={cn('z-50  w-full')}>
         <div className="flex justify-center items-center px-2 sm:container">
