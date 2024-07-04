@@ -7,6 +7,7 @@ import { NavigationMenuItems } from '../components/navigation-items';
 import Navbar from '../components/navbar';
 import { cn } from "@/lib/utils";
 import Head from "next/head";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({subsets:["latin"],weight:['100', '200', '300', '400', '500', '600']});
@@ -49,6 +50,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
+          <Footer/>
       </body>
     </html>
   );
