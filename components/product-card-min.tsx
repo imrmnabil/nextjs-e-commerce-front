@@ -21,7 +21,7 @@ const ProductCardMin: React.FC<ProductCardMinProps> = ({
   isNew = false
 }) => {
   return (
-    <Card className="max-w-xs rounded-none md:border-0 overflow-hidden group flex flex-col flex-grow">
+    <Card className="max-w-xs rounded-none md:border-0 overflow-hidden group flex flex-col flex-grow shadow-sm border-1">
       <CardHeader className="relative aspect-square bg-[#F3F5F7] dark:bg-transparent">
         <Image 
           src={productImage}

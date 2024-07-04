@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({subsets:["latin"],weight:"400"});
+const poppins = Poppins({subsets:["latin"],weight:['100', '200', '300', '400', '500', '600']});
 
 export const metadata: Metadata = {
   title: "Create Next App",
