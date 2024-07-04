@@ -216,7 +216,7 @@ export default function BoxSection() {
     if(isXL) {
       setItemsPerPage(8);
     }
-  });
+  }, [is0, isSM, isLG, isXL] );
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -248,6 +248,7 @@ export default function BoxSection() {
         <div className='grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-4 grid'>
             {currentItems.map((product, index) => (
                     <ProductCardMin
+                      key={index}
                       productImage={product.productImage}
                       productName={product.productName}
                       productPrice={product.productPrice}
