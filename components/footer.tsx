@@ -41,8 +41,8 @@ const Footer = () => {
                     </div>
                     <div className="basis-1/2 md:px-10 justify-center flex flex-col w-full">
                         <h1 className="pb-4 font-medium capitalize">Subscribe to newsletter</h1>
-                        <div className="flex w-full max-w-sm items-center gap-0">
-                            <Input className=" rounded-r-none" type="email" placeholder="Email" />
+                        <div className="rounded-md flex w-full max-w-sm items-center gap-0 focus-within:ring-2 focus-within:ring-black focus-within:ring-offset-2">
+                            <Input className=" rounded-md rounded-r-none focus-visible:ring-transparent focus-visible:ring-offset-0" type="email" placeholder="Email" />
                             <Button type="submit" className="rounded-l-none">Subscribe</Button>
                         </div>
                         <div className="flex py-4 text-lg">
