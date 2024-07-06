@@ -78,7 +78,7 @@ export default function Home() {
                                 <Button variant={"outline"}
                                     className=' text-sm p-3 h-8'>Violet</Button>
                             </div>
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col gap-2'>
                                 <div className='py-2 flex gap-2 max-w-sm'>
                                     <div className='basis-1/3 flex gap-2 text-lg items-center justify-between rounded-lg bg-[#F3F5F7] overflow-hidden'>
                                         <button className='p-3 hover:bg-gray-200' disabled><Minus className='w-4 h-4'/></button>
@@ -119,6 +119,7 @@ export default function Home() {
 
                     </div>
                 </div>
+                Hello
             </div>
         </main>
     );
