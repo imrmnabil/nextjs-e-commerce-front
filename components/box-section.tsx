@@ -248,6 +248,7 @@ export default function BoxSection() {
         <div className='grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-4 grid'>
             {currentItems.map((product, index) => (
                     <ProductCardMin
+                      id={index}
                       key={index}
                       productImage={product.productImage}
                       productName={product.productName}

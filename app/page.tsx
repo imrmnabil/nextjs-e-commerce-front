@@ -8,20 +8,23 @@ import BoxSection from "@/components/box-section";
 
 const topProducts = [
   {
+    "id": 1,
     "productImage": "/images/product/103364.webp",
-    "productName": "WH-1000XM5 Wireless - Noise Canceling Headphones ",
+    "productName": "WH-1000XM5 Wireless - Noise Canceling Headphones",
     "productPrice": 299.99,
     "rating": 5,
     "isNew": true
   },
   {
+    "id": 2,
     "productImage": "/images/product/buds.webp",
-    "productName": "LinkBuds S Truly Wireless Noise Canceling Earbuds ",
+    "productName": "LinkBuds S Truly Wireless Noise Canceling Earbuds",
     "productPrice": 199.99,
     "rating": 4,
     "isNew": false
   },
   {
+    "id": 3,
     "productImage": "/images/product/102189.webp",
     "productName": "Sony Walkman - Music Player NW-WM1AM2",
     "productPrice": 149.99,
@@ -29,6 +32,7 @@ const topProducts = [
     "isNew": false
   },
   {
+    "id": 4,
     "productImage": "/images/product/wh-ch520.webp",
     "productName": "WH-CH520 Wireless - Noise Canceling Headphones",
     "productPrice": 99.99,
@@ -36,14 +40,15 @@ const topProducts = [
     "isNew": true
   },
   {
+    "id": 5,
     "productImage": "/images/product/103364.webp",
-    "productName": "WH-1000XM5 Wireless - Noise Canceling Headphones ",
+    "productName": "WH-1000XM5 Wireless - Noise Canceling Headphones",
     "productPrice": 299.99,
     "rating": 5,
     "isNew": true
   }
-  
 ]
+
 
 
 export default function Home() {

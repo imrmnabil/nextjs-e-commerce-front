@@ -6,6 +6,7 @@ import {Label} from '@/components/ui/label';
 import React from 'react'
 import Link from 'next/link';
 import {Heart, Minus, Plus, ShoppingBag} from 'react-feather';
+import ProductTabs from '@/components/product-tabs';
 
 const carouselImagesBlack = [
     {
@@ -119,7 +120,9 @@ export default function Home() {
 
                     </div>
                 </div>
-                Hello
+                <div className='w-full lg:container'>
+                                <ProductTabs/>
+                </div>
             </div>
         </main>
     );

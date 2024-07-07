@@ -18,6 +18,7 @@ type Props = { heading: String;
  }
 
 type Product = {
+  id: number,
   productImage: string;
   productName: string;
   productPrice: number;
@@ -60,6 +61,7 @@ export default function CommonSection({ heading, products }: Props) {
             <CarouselItem key={index} className=" md:basis-1/3 lg:basis-1/4">
               <div className="flex justify-center">
                 <ProductCardMin
+                  id = {product.id}
                   productImage={product.productImage}
                   productName={product.productName}
                   productPrice={product.productPrice}
